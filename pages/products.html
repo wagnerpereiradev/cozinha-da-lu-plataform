@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Produtos - Cozinha da Lú App</title>
+</head>
+
+<body>
+    <header>
+        <article>
+            <a href="../index.html"><img class="logo" alt="logotipo-cozinha-da-lú"
+                    src="../src/Logotipo Cozinha da Lú-01.png"></a>
+            <nav>
+                <ul>
+                    <li><a href="products.html">Produtos</a></li>
+                    <li><a href="requests.html">Pedidos</a></li>
+                </ul>
+            </nav>
+        </article>
+    </header>
+
+    <div id="add-product" class="backdrop-modal display-none-modal">
+        <div class="modal">
+            <button class="close-modal">❌</button>
+            <h1>Informações do produto</h1>
+            <hr>
+            <form id="form-add-product">
+                <input id="input-product-image" class="input-text" type="text" placeholder="Link da imagem">
+                <input id='input-product-name' class="input-text" type="text" placeholder="Produto">
+                <textarea id='input-product-description' class="input-text" type="text"
+                    placeholder="Descrição"></textarea>
+                <input id="input-product-price" class="input-text" placeholder="Preço unitário">
+            </form>
+            <button onclick="addNewProduct();" id="new-product-button" class="primary-button">Cadastrar
+                produto</button>
+        </div>
+    </div>
+
+    <section id="content">
+        <span>
+            <h1>Produtos</h1>
+            <button id="add-product-button" class="open-modal primary-button">Adicionar produto</button>
+        </span>
+
+        <div class='cards'></div>
+    </section>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

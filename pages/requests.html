@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Produtos - Cozinha da Lú App</title>
+</head>
+
+<body>
+    <header>
+        <article>
+            <a href="../index.html"><img class="logo" alt="logotipo-cozinha-da-lú"
+                    src="../src/Logotipo Cozinha da Lú-01.png"></a>
+            <nav>
+                <ul>
+                    <li><a href="products.html">Produtos</a></li>
+                    <li><a href="requests.html">Pedidos</a></li>
+                </ul>
+            </nav>
+        </article>
+    </header>
+
+    <div id="add-request" class="backdrop-modal display-none-modal">
+        <div class="modal">
+            <button class="close-modal">❌</button>
+            <h1>Detalhes do pedido</h1>
+            <hr>
+            <form id="request-form">
+                <input id="client-name" class="input-text" type="text" placeholder="Nome do cliente">
+                <span class="text-select-product">Selecione o produto:</span>
+                <div id="request-products-available"></div>
+                <div id="order-details"></div>
+                <input id="final-value" class="input-text" type="text" placeholder="Valor total da compra">
+            </form>
+            <button id="new-request-button" class="primary-button" onclick="registerRequest(); closeModal();">Registrar
+                pedido</button>
+        </div>
+    </div>
+
+    <section id="content-requests">
+        <span class="title-request">
+            <h1>Pedidos</h1>
+            <button id="add-request-button" class="open-modal primary-button" onclick="render();">Adicionar
+                pedido</button>
+        </span>
+
+        <div class='list-requests'></div>
+    </section>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
